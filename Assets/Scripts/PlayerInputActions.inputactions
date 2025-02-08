@@ -11,7 +11,7 @@
                     "id": "b1bede06-117a-4c33-971e-86eeade59a7f",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": "Hold(duration=0.3,pressPoint=0.3)",
+                    "interactions": "",
                     "initialStateCheck": true
                 },
                 {
@@ -24,7 +24,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Attack",
+                    "name": "PunchAttack",
                     "type": "Button",
                     "id": "0704c1e5-2628-4cc6-831c-ce36771d5daf",
                     "expectedControlType": "",
@@ -85,6 +85,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "KickAttack",
+                    "type": "Button",
+                    "id": "254aa9f3-341a-4e28-a6e5-e4f5ab1bec29",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -102,7 +111,7 @@
                 {
                     "name": "WASD",
                     "id": "8cd31678-a32d-49be-95ce-32535cacee5d",
-                    "path": "Dpad",
+                    "path": "Dpad(mode=2)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -259,7 +268,7 @@
                     "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -271,7 +280,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "Attack",
+                    "action": "PunchAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -282,7 +291,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Attack",
+                    "action": "PunchAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -293,7 +302,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Touch",
-                    "action": "Attack",
+                    "action": "PunchAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -304,7 +313,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
-                    "action": "Attack",
+                    "action": "PunchAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -315,7 +324,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "XR",
-                    "action": "Attack",
+                    "action": "PunchAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -326,7 +335,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Attack",
+                    "action": "PunchAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "24951bd6-5c33-40b2-8e2a-89c5d249dd62",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "PunchAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -481,6 +501,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8469d909-b50e-4914-98bd-82b1418c9f20",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "KickAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
