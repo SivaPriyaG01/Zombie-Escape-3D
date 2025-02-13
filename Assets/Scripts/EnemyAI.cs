@@ -63,7 +63,7 @@ public class EnemyAI : MonoBehaviour
         animator.SetBool(animationStates[randomIndex], true);
         transform.LookAt(player); // Face the player before attacking
 
-        Debug.Log("Enemy Attacks!");
+        
 
         //yield return new WaitForSeconds(attackCooldown); // Wait for attack to finish
 

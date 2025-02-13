@@ -82,6 +82,7 @@ public class PlayerCtr : MonoBehaviour
     {
         if(hit.gameObject.CompareTag("SafeZone"))
         {
+            Debug.Log("Entered Safe Zone");
             if(keyCount==maxKeyCount)
             {
                 Debug.Log("SafeZone entered, you won");

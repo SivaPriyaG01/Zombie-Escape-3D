@@ -55,7 +55,7 @@ public class EnemyAttackScript : MonoBehaviour
     private NavMeshAgent agent;
     private Animator animator;
     [SerializeField] float attackRange = 2.0f;
-    [SerializeField] int damage = 10;
+    //[SerializeField] int damage = 10;
     private bool isAttacking = false;
 
     void Start()
