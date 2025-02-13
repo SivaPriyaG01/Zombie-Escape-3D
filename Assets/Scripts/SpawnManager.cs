@@ -10,6 +10,7 @@ public class SpawnManager : MonoBehaviour
 
     [SerializeField] float xRange = 25f;
     [SerializeField] float zRange = 25f;
+    [SerializeField] float yHeight = 0.25f;
     int maxEnemiesCount = 30;
     int maxKeyCount =3;
     int maxSafeZone = 1;
@@ -17,9 +18,9 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SpawnObjects(maxEnemiesCount,enemyToSpawn);
-        SpawnObjects(maxKeyCount,keysToSpawn);
-        SpawnObjects(maxSafeZone,safeArea);
+        SpawnObjects(maxEnemiesCount,enemyToSpawn,0f);
+        SpawnObjects(maxKeyCount,keysToSpawn,yHeight);
+        SpawnObjects(maxSafeZone,safeArea,0f);
     }
     // Update is called once per frame
     void Update()
@@ -27,14 +28,14 @@ public class SpawnManager : MonoBehaviour
         
     }
 
-    void SpawnObjects(int count, GameObject objectToSpawn)
+    void SpawnObjects(int count, GameObject objectToSpawn, float height)
     {
         for(int i =0; i< count; i++)
         {
             float randomSpawnX = Random.Range(xRange,-xRange);
             float randomSpawnZ = Random.Range(zRange,-zRange);
         
-            Vector3 randomSpawnPoint = new Vector3(randomSpawnX,0,randomSpawnZ);
+            Vector3 randomSpawnPoint = new Vector3(randomSpawnX,height,randomSpawnZ);
             Instantiate(objectToSpawn,randomSpawnPoint,Quaternion.identity);
     
         }

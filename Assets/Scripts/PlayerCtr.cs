@@ -78,33 +78,6 @@ public class PlayerCtr : MonoBehaviour
         }
     }
 
-    // private void OnTriggerEnter(Collider other) 
-    // {
-    //     if(other.gameObject.CompareTag("SafeZone"))
-    //     {
-    //         if(keyCount==maxKeyCount)
-    //         {
-    //             Debug.Log("SafeZone entered, you won");
-    //             enemyScript.enabled=false;
-    //         }
-    //         else
-    //         {
-    //             Debug.Log("Collect all keys");
-    //         }
-    //     }
-
-    //     if(other.gameObject.CompareTag("GoldGem"))
-    //     {
-    //         keyCount++;
-    //         Debug.Log($"{keyCount} key collected");
-    //         if(keyCount==maxKeyCount)
-    //         {
-    //             Debug.Log("All keys collected, enter safe zone");
-    //         }
-    //         Destroy(other.gameObject);
-    //     }   
-    // }
-
     private void OnControllerColliderHit(ControllerColliderHit hit) 
     {
         if(hit.gameObject.CompareTag("SafeZone"))
