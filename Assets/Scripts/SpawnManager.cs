@@ -8,10 +8,10 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] GameObject keysToSpawn;
     [SerializeField] GameObject safeArea;
 
-    [SerializeField] float xRange = 25f;
-    [SerializeField] float zRange = 25f;
+    [SerializeField] float xRange = 60f;
+    [SerializeField] float zRange = 60f;
     [SerializeField] float yHeight = 0.25f;
-    int maxEnemiesCount = 30;
+    int maxEnemiesCount = 60;
     int maxKeyCount =3;
     int maxSafeZone = 1;
 
