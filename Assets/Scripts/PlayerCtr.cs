@@ -80,41 +80,9 @@ public class PlayerCtr : MonoBehaviour
         }
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit) 
-    {
-        if(hit.gameObject.CompareTag("SafeZone"))
-        {
-            //Debug.Log("Entered Safe Zone");
-            messages.text="Entered Safe Zone";
-            if(keyCount==maxKeyCount)
-            {
-                //Debug.Log("SafeZone entered, you won");
-                messages.text="SafeZone entered, you won";
-                enemyScript.enabled=false;
-            }
-            else
-            {
-                messages.text="Collect all keys";
-                //Debug.Log("Collect all keys");
-            }
-        }
-
-        if(hit.gameObject.CompareTag("GoldGem"))
-        {
-            keyCount++;
-            Debug.Log($"{keyCount} key collected");
-            if(keyCount==maxKeyCount)
-            {
-                messages.text="All keys collected, enter safe zone";
-                //Debug.Log("All keys collected, enter safe zone");
-            }
-            Destroy(hit.gameObject);
-        }   
-    }
-
-    // void OnTriggerEnter(Collider other)
+    // private void OnControllerColliderHit(ControllerColliderHit hit) 
     // {
-    //     if(other.gameObject.CompareTag("SafeZone"))
+    //     if(hit.gameObject.CompareTag("SafeZone"))
     //     {
     //         //Debug.Log("Entered Safe Zone");
     //         messages.text="Entered Safe Zone";
@@ -131,7 +99,7 @@ public class PlayerCtr : MonoBehaviour
     //         }
     //     }
 
-    //     if(other.gameObject.CompareTag("GoldGem"))
+    //     if(hit.gameObject.CompareTag("GoldGem"))
     //     {
     //         keyCount++;
     //         Debug.Log($"{keyCount} key collected");
@@ -140,8 +108,41 @@ public class PlayerCtr : MonoBehaviour
     //             messages.text="All keys collected, enter safe zone";
     //             //Debug.Log("All keys collected, enter safe zone");
     //         }
-    //         Destroy(other.gameObject);
-    //     } 
+    //         Destroy(hit.gameObject);
+    //     }   
+    // }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("SafeZone"))
+        {
+            //Debug.Log("Entered Safe Zone");
+            messages.text="Entered Safe Zone";
+            if(keyCount==maxKeyCount)
+            {
+                //Debug.Log("SafeZone entered, you won");
+                messages.text="SafeZone entered, you won";
+                enemyScript.enabled=false;
+            }
+            else
+            {
+                messages.text="Collect all keys";
+                //Debug.Log("Collect all keys");
+            }
+        }
+
+        if(other.gameObject.CompareTag("GoldGem"))
+        {
+            keyCount++;
+            Debug.Log($"{keyCount} key collected");
+            if(keyCount==maxKeyCount)
+            {
+                messages.text="All keys collected, enter safe zone";
+                //Debug.Log("All keys collected, enter safe zone");
+            }
+            Destroy(other.gameObject);
+        } 
+
+}
 }
 
