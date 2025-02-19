@@ -18,7 +18,7 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SpawnObjects(maxEnemiesCount,enemyToSpawn,0f);
+        //SpawnObjects(maxEnemiesCount,enemyToSpawn,0f);
         SpawnObjects(maxKeyCount,keysToSpawn,yHeight);
         SpawnObjects(maxSafeZone,safeArea,0f);
     }
